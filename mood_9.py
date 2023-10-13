@@ -2,7 +2,7 @@
 L:50, X:10, V:5, I:1.'''
 
 
-Y = int(input()) #year
+Y = int(input("Enter year :")) #year
 yt = list(str(Y))
 rom=[]
 dig = len(yt)
@@ -32,16 +32,17 @@ def order(num,_1u,_5u,_10u):
 #thousands
 M = int(yt[0])
 for a in range(0,M):
-    rom.append('m')
+    rom.append('M')
 #hundreds
 C = int(yt[1])
-order(C,'c','d','m')
+order(C,'C','D','M')
 #tens
 X = int(yt[2])
-order(X,'x','l','c')
+order(X,'X','L','C')
 #units
 I = int(yt[3])
-order(I,'i','v','x')
+order(I,'I','V','X')
 #printing roman number
+print(Y," in roman numerals is",end=" ")
 for i in rom:
-    print(i)
+    print(i,end="")
